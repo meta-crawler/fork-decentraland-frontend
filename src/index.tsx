@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import "./index.css";
 import App from "./App";
 import store from "redux/store";
+import ThemeProvider from "theme";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>
 );
