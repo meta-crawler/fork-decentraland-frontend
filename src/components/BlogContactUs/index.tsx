@@ -67,8 +67,8 @@ const BlogContactUs = () => {
               pb: "100px",
             }}
           >
-            {blogData.map((d) => (
-              <Box px="10px" width="33.3%" sx={{}}>
+            {blogData.map((d, i) => (
+              <Box key={i.toString()} px="10px" width="33.3%" sx={{}}>
                 <Gallery img={d.img} date={d.date} content={d.content} />
               </Box>
             ))}
@@ -80,8 +80,9 @@ const BlogContactUs = () => {
               justifyContent: "space-between",
             }}
           >
-            {contactUsData.map((d) => (
+            {contactUsData.map((d, i) => (
               <ContactUs
+                key={i.toString()}
                 title={d.title}
                 content={d.content}
                 input={d.input}
