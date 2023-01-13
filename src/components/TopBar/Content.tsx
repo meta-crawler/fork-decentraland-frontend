@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import { ColorButton, AlphaButton } from "components/common/Buttons";
 
