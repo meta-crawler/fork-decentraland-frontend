@@ -61,7 +61,14 @@ const TopBarContent = () => {
           />
           <AlphaButton label="OPEN IN BROWER" _width="160px" _border={true} />
         </Box>
-        <Box mt={3}>
+        <Box
+          mt={3}
+          flexDirection="row"
+          justifyContent="center"
+          sx={{
+            display: { xs: "flex", md: "none" },
+          }}
+        >
           <ColorButton label="GET STARED" _width="240px" />
         </Box>
       </Box>

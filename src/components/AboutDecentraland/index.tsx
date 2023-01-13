@@ -19,13 +19,15 @@ const AboutDecentraland = () => {
         backgroundImage: "url(./assets/images/1.png)",
       }}
     >
-      <Container>
+      <Container maxWidth="lg">
         <Box
           display="flex"
           flexDirection="row"
-          justifyContent="center"
           pt="80px"
           pb="80px"
+          sx={{
+            justifyContent: { xs: "center", md: "flex-start" },
+          }}
         >
           <Description titles={data.titles} buttons={data.buttons} />
         </Box>
