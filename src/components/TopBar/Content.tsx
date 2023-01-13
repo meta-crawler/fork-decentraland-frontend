@@ -30,13 +30,14 @@ const TopBarContent = () => {
           fontWeight="300"
           sx={(theme) => ({
             color: theme.palette.text.primary,
-            maxWidth: "600px",
+            maxWidth: { xs: "auto", md: "600px" },
             width: "100%",
             fontStretch: "normal",
             fontStyle: "normal",
             fontWeight: "300",
             letterSpacing: ".3px",
             lineHeight: "1.81",
+            textAlign: { xs: "center", md: "left" },
           })}
         >
           Create, explore and trade in the first-ever virtual world owned by its
@@ -60,20 +61,9 @@ const TopBarContent = () => {
           />
           <AlphaButton label="OPEN IN BROWER" _width="160px" _border={true} />
         </Box>
-        <Button
-          sx={(theme) => ({
-            display: { xs: "initial", md: "none" },
-            mt: "31px",
-            mr: "15px",
-            px: "35px",
-            py: "15px",
-            backgroundColor: theme.palette.text.disabled,
-            color: theme.palette.text.primary,
-            fontSize: "15px",
-          })}
-        >
-          GET STARED
-        </Button>
+        <Box mt={3}>
+          <ColorButton label="GET STARED" _width="240px" />
+        </Box>
       </Box>
     </Container>
   );

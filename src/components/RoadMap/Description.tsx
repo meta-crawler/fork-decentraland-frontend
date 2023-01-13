@@ -63,14 +63,14 @@ const Description: React.FC<ContentProps> = ({ titles, buttons }) => {
         {titles[2]}
       </Typography>
       <Box
+        display="flex"
         flexDirection="row"
         flexWrap="wrap"
-        justifyContent="felx-start"
         gap="12px"
         width="100%"
-        mt="30px"
         sx={{
-          display: { xs: "none", md: "flex" },
+          mt: { xs: "10px", md: "30px" },
+          justifyContent: { xs: "center", md: "flex-start" },
         }}
       >
         {buttons.map((button: string, index: number) =>

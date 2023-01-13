@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
+import { ColorButton } from "components/common/Buttons";
 
 interface styleProps {
   title: string;
@@ -19,6 +20,7 @@ const ContactUs: React.FC<styleProps> = ({ title, content, input, button }) => {
           mt: "21px",
           mb: "14px",
           fontWeight: "600",
+          textAlign: { xs: "center", md: "left" },
         }}
       >
         {title}
@@ -35,35 +37,30 @@ const ContactUs: React.FC<styleProps> = ({ title, content, input, button }) => {
       </Typography>
       <Box
         sx={{
+          px: "20px",
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           alignItems: "center",
         }}
       >
         {input && (
-          <Box width="70%" mr="20px">
+          <Box flexGrow={1} width="100%" mr="20px">
             <TextField
               id="outlined-basic"
-              label="Outlined"
               variant="outlined"
+              size="small"
               fullWidth
             />
           </Box>
         )}
-        <Typography
-          sx={(theme) => ({
-            backgroundColor: "#FF2D55",
-            color: theme.palette.text.primary,
-            py: "13px",
-            px: "32px",
-            fontSize: "13px",
-            mb: "21px",
-            fontWeight: "300",
-            borderRadius: "6px",
-          })}
+        <Box
+          display="flex"
+          flexDirection="row"
+          width="100%"
+          sx={{ justifyContent: { xs: "center", md: "flex-start" } }}
         >
-          {button}
-        </Typography>
+          <ColorButton label={button} _width="240px" />
+        </Box>
       </Box>
     </Box>
   );

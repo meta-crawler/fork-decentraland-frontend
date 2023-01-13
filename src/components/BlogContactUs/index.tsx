@@ -50,25 +50,26 @@ const BlogContactUs = () => {
       <Container>
         <Box pt="80px" pb="80px">
           <Typography
+            pb="30px"
             sx={{
               color: "#16141A",
               fontSize: "48px",
               fontWeight: "600",
-              pb: "30px",
+              textAlign: { xs: "center", md: "left" },
             }}
           >
             From The blog
           </Typography>
           <Box
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", md: "column", lg: "row" },
-              mx: "-10px",
-              pb: "100px",
-            }}
+            display="flex"
+            flexDirection="row"
+            justifyContent="space-around"
+            flexWrap="wrap"
+            gap={2}
+            pb="100px"
           >
             {blogData.map((d, i) => (
-              <Box key={i.toString()} px="10px" width="33.3%" sx={{}}>
+              <Box key={i.toString()} px="10px" width="352px" sx={{}}>
                 <Gallery img={d.img} date={d.date} content={d.content} />
               </Box>
             ))}
