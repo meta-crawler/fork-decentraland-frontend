@@ -1,3 +1,5 @@
+**Prefer Ubuntu Environment**
+
 ## Available Scripts
 
 In the project directory, you can run:
